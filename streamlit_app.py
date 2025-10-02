@@ -41,7 +41,7 @@ if amount_of_wallet > 0 and st.session_state.customise_pressed:
         engraving_text = st.text_input("What would you like engraved?", key="engraving_text")
         price_of_wallet += 10
 
-while st.session_state.button("Purchase") = True:
+while st.session_state.button("Purchase") == True:
     st.balloons()
 
 st.write("Your total =", price_of_wallet)
