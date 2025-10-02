@@ -12,13 +12,16 @@ if st.button("Customise your wallet"):
     st.session_state.button_press = True
     
 customise = ['engraving', 'material']
+for item in customise:
+    st.write('customisation :', item)
 if "button_press" not in st.session_state:
     st.session_state.button_press = False
 
 if st.button("engraving"):
     st.session_state.button_press = True
     st.text_input('what are you engraving?', key = 'engraving')
-    price_of_wallet += 10
+    st.write('engravingadd $10')
+price_of_wallet += 10
     
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.button_press:
