@@ -4,7 +4,10 @@ st.title("buy your wallet!!")
 
 number = st.number_input("Enter the quantity of wallets, $20 each",min_value=0, max_value=10, step=1, key="wallets")
 price_of_wallet = number*20
-customise = ['material', 'engraving']
+
+#discount price for tiered pricing 
+
+customise = ['material', 'engraving'] #add colours appeal to more ages bro idk anymore
 st.write('customisations available:')
 for item in customise:
     st.write(item)
