@@ -8,14 +8,17 @@ customise = ['engraving', 'material']
 for item in customise:
     st.write('customisation :', item)
     
-if "button_press" not in st.session_state:
-    st.session_state.button_press = False
+if "customise_pressed" not in st.session_state:
+    st.session_state.customise_pressed = False
+if "engraving_pressed" not in st.session_state:
+    st.session_state.engraving_pressed = False
 
 if st.button("Customise your wallet"):
-    st.session_state.button_press = True
+    st.session_state.customise_pressed = True
+
     
 amount_of_wallet = number
-if amount_of_wallet > 0 and st.session_state.button_press:
+if amount_of_wallet > 0 and st.session_state.customise_press:
     choice = st.selectbox("Select one material", ["leather", "nylon", "canvas"])
 
     if choice == "leather":
@@ -30,13 +33,16 @@ if amount_of_wallet > 0 and st.session_state.button_press:
     if "button_press" not in st.session_state:
         st.session_state.button_press = False
 
-    if st.button("engraving"):
-        st.session_state.button_press = True
-        st.write('Engraving add $10')
-        st.text_input('what are you engraving?', key = 'engraving')
+    if st.button("Add engraving"):
+        st.session_state.engraving_pressed = True
+
+    if st.session_state.engraving_pressed:
+        st.write("Engraving adds $10")
+        engraving_text = st.text_input("What would you like engraved?", key="engraving_text")
+        total_price += 10
         
         price_of_wallet += 10
 
-st.button("Purchase")
+        st.button("Purchase")
 
-st.write("Your total =", price_of_wallet)
+        st.write("Your total =", price_of_wallet)
