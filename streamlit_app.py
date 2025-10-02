@@ -18,7 +18,7 @@ if st.button("Customise your wallet"):
 
     
 amount_of_wallet = number
-if amount_of_wallet > 0 and st.session_state.customise_press:
+if amount_of_wallet > 0 and st.session_state.customise_pressed:
     choice = st.selectbox("Select one material", ["leather", "nylon", "canvas"])
 
     if choice == "leather":
