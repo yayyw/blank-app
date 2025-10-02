@@ -4,16 +4,16 @@ st.title("buy your wallet!!")
 
 number = st.number_input("Enter the quantity of wallets, $20 each",min_value=0, max_value=10, step=1, key="wallets")
 price_of_wallet = number*20
-
+customise = ['engraving', 'material']
+for item in customise:
+    st.write('customisation :', item)
 if "button_press" not in st.session_state:
     st.session_state.button_press = False
 
 if st.button("Customise your wallet"):
     st.session_state.button_press = True
     
-customise = ['engraving', 'material']
-for item in customise:
-    st.write('customisation :', item)
+
 if "button_press" not in st.session_state:
     st.session_state.button_press = False
 
