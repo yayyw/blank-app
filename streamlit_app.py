@@ -39,10 +39,10 @@ if amount_of_wallet > 0 and st.session_state.customise_pressed:
     if st.session_state.engraving_pressed:
         st.write("Engraving adds $10")
         engraving_text = st.text_input("What would you like engraved?", key="engraving_text")
-        total_price += 10
+        price_of_wallet += 10
         
         price_of_wallet += 10
 
         st.button("Purchase")
 
-        st.write("Your total =", price_of_wallet)
+st.write("Your total =", price_of_wallet)
