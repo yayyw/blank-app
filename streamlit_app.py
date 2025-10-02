@@ -7,21 +7,14 @@ price_of_wallet = number*20
 customise = ['engraving', 'material']
 for item in customise:
     st.write('customisation :', item)
+    
 if "button_press" not in st.session_state:
     st.session_state.button_press = False
 
 if st.button("Customise your wallet"):
     st.session_state.button_press = True
-    
 
-if "button_press" not in st.session_state:
-    st.session_state.button_press = False
 
-if st.button("engraving"):
-    st.session_state.button_press = True
-    st.text_input('what are you engraving?', key = 'engraving')
-    st.write('engravingadd $10')
-price_of_wallet += 10
     
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.button_press:
@@ -35,6 +28,15 @@ if amount_of_wallet > 0 and st.session_state.button_press:
         price_of_wallet += 25
     else:
         st.write("Canvas adds $0")
+
+    if "button_press" not in st.session_state:
+        st.session_state.button_press = False
+
+    if st.button("engraving"):
+        st.session_state.button_press = True
+        st.text_input('what are you engraving?', key = 'engraving')
+        st.write('Engraving add $10')
+price_of_wallet += 10
 
     st.button("Purchase")
 
