@@ -38,6 +38,6 @@ if amount_of_wallet > 0 and st.session_state.button_press:
         st.write('Engraving add $10')
 price_of_wallet += 10
 
-    st.button("Purchase")
+st.button("Purchase")
 
 st.write("Your total =", price_of_wallet)
