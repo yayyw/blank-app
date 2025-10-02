@@ -13,8 +13,6 @@ if "button_press" not in st.session_state:
 
 if st.button("Customise your wallet"):
     st.session_state.button_press = True
-
-
     
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.button_press:
@@ -34,8 +32,9 @@ if amount_of_wallet > 0 and st.session_state.button_press:
 
     if st.button("engraving"):
         st.session_state.button_press = True
-        st.text_input('what are you engraving?', key = 'engraving')
         st.write('Engraving add $10')
+st.text_input('what are you engraving?', key = 'engraving')
+        
 price_of_wallet += 10
 
 st.button("Purchase")
