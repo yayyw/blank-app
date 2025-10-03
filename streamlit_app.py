@@ -7,18 +7,18 @@ price_of_wallet = number*20
 
 #discount price for tiered pricing 
 
-customise = ['material', 'engraving'] #add colours appeal to more ages bro idk anymore
+customise = ['material', 'engraving'] #add colours appeal to more ages bro idk anymore, list
 st.write('customisations available:')
-for item in customise:
+for item in customise: #for loop
     st.write(item)
     
-if "customise_pressed" not in st.session_state:
+if "customise_pressed" not in st.session_state: #visibility of button
     st.session_state.customise_pressed = False
 if "engraving_pressed" not in st.session_state:
     st.session_state.engraving_pressed = False
 
 if st.button("Customise your wallet"):
-    st.session_state.customise_pressed = True
+    st.session_state.customise_pressed = True #when button pressed
 
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.customise_pressed:
