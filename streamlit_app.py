@@ -17,8 +17,7 @@ if "customise_pressed" not in st.session_state: #visibility of button
 if "engraving_pressed" not in st.session_state:
     st.session_state.engraving_pressed = False
 
-if st.button("Customise your wallet"):
-    st.session_state.customise_pressed = True #when button pressed
+
 
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.customise_pressed:
@@ -32,7 +31,9 @@ if amount_of_wallet > 0 and st.session_state.customise_pressed:
         price_of_wallet += 25
     else:
         st.write("Canvas adds $0")
-
+if st.button("Customise your wallet"):
+    st.session_state.customise_pressed = True #when button pressed
+    
     if st.button("Add engraving"):
         st.session_state.engraving_pressed = True
 
