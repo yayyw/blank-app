@@ -32,8 +32,8 @@ if amount_of_wallet > 0 and st.session_state.customise_pressed:
     else:
         st.write("Canvas adds $0")
         
-    if st.button("Customise your wallet"):
-    st.session_state.customise_pressed = True #when button pressed
+        if st.button("Customise your wallet"):
+            st.session_state.customise_pressed = True #when button pressed
     
         if st.button("Add engraving"):
             st.session_state.engraving_pressed = True
