@@ -19,9 +19,9 @@ for i in range(number):
     engraving_pressed = "engraving_pressed" + str(i)
     
     if customise_pressed not in st.session_state: #visibility of button
-        st.session_state.customise_pressed = False
+        st.session_state[customise_pressed] = False
     if engraving_pressed not in st.session_state:
-        st.session_state.engraving_pressed = False
+        st.session_state[engraving_pressed] = False
 
     if st.button("Customise your wallet", key = "customisation_button" + str(i)):
         st.session_state.customise_pressed = True #when button pressed
@@ -51,9 +51,9 @@ for i in range(number):
             st.write("Canvas adds $0")
     
         if st.button("Add engraving", key = "engrave_button" + str(i)):
-            st.session_state.engraving_pressed = True
+            st.session_state[engraving_pressed] = True
 
-        if st.session_state.engraving_pressed:
+        if st.session_state[engraving_pressed]:
             st.write("Engraving adds $10")
             engraving_text = st.text_input("What would you like engraved?", key="engraving_text" + str(i))
             price_of_wallet += 10
