@@ -7,7 +7,7 @@ price_of_wallet = number*20
 
 #discount price for tiered pricing 
 
-customise = ['material', 'engraving'] #add colours appeal to more ages bro idk anymore, list
+customise = ['size', 'material', 'engraving'] #add colours appeal to more ages bro idk anymore, list
 st.write('customisations available:')
 for item in customise: #for loop
     st.write(item)
@@ -22,6 +22,17 @@ if st.button("Customise your wallet"):
 
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.customise_pressed:
+    st.image(wallet.jpeg, caption ="small")
+    size = st.selectbox("Select a size", ["small", "medium", "large"]) #reyna's code
+    if choice == "medium":
+        st.write("For medium add $10")
+        price_of_wallet += 10
+    elif choice == "large":
+        st.write("For large add $20")
+        price_of_wallet += 20
+    else:
+        st.write("small adds $0")
+        
     choice = st.selectbox("Select one material", ["leather", "nylon", "canvas"])
         
     if choice == "leather":
