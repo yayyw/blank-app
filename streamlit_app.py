@@ -50,7 +50,7 @@ for i in range(number):
         else:
             st.write("Canvas adds $0")
     
-        if st.button("Add engraving" key = "engrave_button" + str(i)):
+        if st.button("Add engraving", key = "engrave_button" + str(i)):
             st.session_state.engraving_pressed = True
 
         if st.session_state.engraving_pressed:
