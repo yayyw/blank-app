@@ -50,12 +50,12 @@ for i in range(number):
         else:
             st.write("Canvas adds $0")
     
-        if st.button("Add engraving", key = str(i)):
+        if st.button("Add engraving":
             st.session_state.engraving_pressed = True
 
         if st.session_state.engraving_pressed:
             st.write("Engraving adds $10")
-            engraving_text = st.text_input("What would you like engraved?", key="engraving_text" + str(i))
+            engraving_text = st.text_input("What would you like engraved?", key="engraving_text")
             price_of_wallet += 10
 
 st.write("Your total =", price_of_wallet)
