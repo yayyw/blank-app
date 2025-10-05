@@ -22,7 +22,7 @@ if st.button("Customise your wallet"):
 
 amount_of_wallet = number
 if amount_of_wallet > 0 and st.session_state.customise_pressed:
-    st.image('https://pngimg.com/uploads/wallet/wallet_PNG77078.png', caption ="wallet")
+    st.image('https://pngimg.com/uploads/wallet/wallet_PNG77078.png', caption ="wallet", width = 100)
     size = st.selectbox("Select a size", ["small", "medium", "large"]) #reyna's code
     if size == "medium":
         st.write("For medium add $10")
