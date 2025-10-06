@@ -24,10 +24,10 @@ for i in range(number):
         st.session_state[engraving_pressed] = False
 
     if st.button("Customise your wallet", key = "customisation_button" + str(i)):
-        st.session_state.customise_pressed = True #when button pressed
+        st.session_state[customise_pressed] = True #when button pressed
 
     amount_of_wallet = number
-    if amount_of_wallet > 0 and st.session_state.customise_pressed:
+    if amount_of_wallet > 0 and st.session_state[customise_pressed]:
         st.image('https://pngimg.com/uploads/wallet/wallet_PNG77078.png', caption =None, width = 100) 
         size = st.selectbox("Select a size", ["small", "medium", "large"], key="size" + str(i)) #reyna's code + for loop for customers to customise each wallet
         if size == "medium":
