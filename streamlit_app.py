@@ -9,7 +9,7 @@ price_of_wallet = number*20
 
 for i in range(number):
     st.subheader("Wallet " + str(i + 1))
-    customise = ['size', 'material', 'engraving'] #add colours appeal to more ages bro idk anymore, list
+    customise = ['size', 'material', 'colour', 'engraving'] #add colours appeal to more ages bro idk anymore, list
     
     st.write('customisations available:')
     for item in customise: #for loop
