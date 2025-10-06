@@ -1,10 +1,5 @@
 import streamlit as st
 
-[theme]
-base="light"
-backgroundColor="white"
-codeBackgroundColor="powderBlue"
-
 st.title("buy your wallet!!")
 
 number = st.number_input("Enter the quantity of wallets, $20 each",min_value=0, max_value=10, step=1, key="wallets")
